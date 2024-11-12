@@ -1,0 +1,191 @@
+/* General styling for body */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+}
+
+/* Styling for the main title (h1) */
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Container for the whole main content */
+.container {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px; /* Maximum width for larger screens */
+  text-align: center;
+  border: 3px solid #ff7e5f;
+}
+
+/* Styling for input fields */
+input[type="number"], #cash {
+  width: 100%;
+  padding: 15px;
+  margin: 15px 0;
+  border: 2px solid #ddd;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Input field focus state */
+input[type="number"]:focus {
+  outline: none;
+  border-color: #feb47b;
+  box-shadow: 0 0 8px rgba(255, 106, 0, 0.6);
+}
+
+/* Styling for the purchase button */
+button {
+  background-color: #ff7e5f;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  width: 100%;
+  max-width: 300px; /* Limit max width */
+}
+
+/* Button hover state */
+button:hover {
+  background-color: #feb47b;
+  transform: translateY(-4px);
+}
+
+/* Button focus state */
+button:focus {
+  outline: none;
+}
+
+/* Styling for the price display */
+#price-screen {
+  font-size: 1.3rem;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+/* Styling for the change due display */
+#change-due {
+  margin-top: 20px;
+}
+
+#change-due p {
+  font-size: 1.1rem;
+  color: #333;
+  margin: 5px 0;
+  background-color: #ff7e5f;
+  padding: 8px;
+  border-radius: 10px;
+  color: white;
+}
+
+/* Cash drawer display styling */
+#cash-drawer-display {
+  margin-top: 30px;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+#cash-drawer-display p {
+  margin: 5px 0;
+  padding: 6px;
+  background-color: #feb47b;
+  border-radius: 10px;
+  color: white;
+}
+
+/* Alert for insufficient funds */
+.alert {
+  color: #f44336;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+}
+
+/* Styling for btns-container */
+.btns-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+/* Media query for responsive design */
+@media (max-width: 768px) {
+  /* Adjust the title font size for smaller screens */
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  /* Reduce padding and margins for smaller devices */
+  .container {
+    padding: 20px;
+  }
+
+  input[type="number"], #cash, button {
+    padding: 12px;
+    font-size: 1rem;
+  }
+
+  /* Make buttons stack vertically on small screens */
+  .btns-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Adjust the button width */
+  button {
+    max-width: 90%;
+  }
+}
+
+/* Media query for smaller devices (max-width: 480px) */
+@media (max-width: 480px) {
+  /* Make the container take up more width */
+  .container {
+    max-width: 95%;
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 1.2rem;
+  }
+
+  input[type="number"], #cash, button {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  /* Button width is now 100% on mobile */
+  button {
+    max-width: 100%;
+  }
+
+  /* Adjust the layout for change due and drawer displays */
+  #change-due p, #cash-drawer-display p {
+    font-size: 1rem;
+    padding: 6px;
+  }
+}
